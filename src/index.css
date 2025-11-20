@@ -1,0 +1,231 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Système de couleurs moderne BONATOURS */
+@layer base {
+  :root {
+    /* Mode clair (Light Mode) */
+    --background: 220 13% 98%;        /* #F9FAFB */
+    --foreground: 217 33% 17%;        /* #111827 */
+
+    --card: 0 0% 100%;                /* #FFFFFF */
+    --card-foreground: 217 33% 17%;   /* #111827 */
+
+    --popover: 0 0% 100%;             /* #FFFFFF */
+    --popover-foreground: 217 33% 17%; /* #111827 */
+
+    --primary: 221 83% 53%;           /* #2563EB */
+    --primary-foreground: 0 0% 100%;  /* #FFFFFF */
+
+    --secondary: 215 20% 65%;         /* #64748B */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+
+    --muted: 220 13% 95%;             /* #F3F4F6 */
+    --muted-foreground: 215 16% 47%;  /* #4B5563 */
+
+    --accent: 220 13% 91%;            /* #E5E7EB */
+    --accent-foreground: 217 33% 17%; /* #111827 */
+
+    --destructive: 0 84% 60%;         /* #DC2626 */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+
+    --success: 142 76% 36%;           /* #16A34A */
+    --success-foreground: 0 0% 100%;  /* #FFFFFF */
+
+    --warning: 32 95% 44%;            /* #F59E0B */
+    --warning-foreground: 0 0% 100%;  /* #FFFFFF */
+
+    --border: 220 13% 91%;            /* #E5E7EB */
+    --input: 220 13% 91%;             /* #E5E7EB */
+    --ring: 221 83% 53%;              /* #2563EB */
+
+    --radius: 0.75rem;                /* 12px */
+
+    --sidebar-background: 221 83% 53%; /* #2563EB */
+    --sidebar-foreground: 0 0% 100%;   /* #FFFFFF */
+    --sidebar-accent: 221 83% 60%;     /* Plus clair */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 221 83% 45%;     /* Plus foncé */
+    --sidebar-ring: 221 83% 53%;
+
+    /* Couleurs spécifiques pour les cartes */
+    --card-blue-bg: 219 95% 95%;      /* #EBF4FF */
+    --card-blue: 221 83% 53%;         /* #2563EB */
+    --card-green-bg: 142 76% 95%;     /* #ECFDF5 */
+    --card-green: 142 76% 36%;        /* #16A34A */
+    --card-orange-bg: 32 95% 95%;     /* #FEF3C7 */
+    --card-orange: 32 95% 44%;        /* #F59E0B */
+    --card-red-bg: 0 84% 95%;         /* #FEE2E2 */
+    --card-red: 0 84% 60%;            /* #DC2626 */
+
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark {
+    /* Mode sombre (Dark Mode) */
+    --background: 217 33% 17%;        /* #111827 */
+    --foreground: 220 13% 98%;        /* #F9FAFB */
+
+    --card: 215 28% 17%;              /* #1F2937 */
+    --card-foreground: 220 13% 98%;   /* #F9FAFB */
+
+    --popover: 215 28% 17%;           /* #1F2937 */
+    --popover-foreground: 220 13% 98%; /* #F9FAFB */
+
+    --primary: 213 94% 68%;           /* #3B82F6 */
+    --primary-foreground: 217 33% 17%; /* #111827 */
+
+    --secondary: 215 20% 65%;         /* #9CA3AF */
+    --secondary-foreground: 217 33% 17%; /* #111827 */
+
+    --muted: 215 28% 17%;             /* #1F2937 */
+    --muted-foreground: 220 9% 82%;   /* #D1D5DB */
+
+    --accent: 215 25% 27%;            /* #374151 */
+    --accent-foreground: 220 13% 98%; /* #F9FAFB */
+
+    --destructive: 0 62% 30%;         /* #EF4444 */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+
+    --success: 142 76% 55%;           /* #22C55E */
+    --success-foreground: 217 33% 17%; /* #111827 */
+
+    --warning: 54 91% 45%;            /* #FACC15 */
+    --warning-foreground: 217 33% 17%; /* #111827 */
+
+    --border: 215 25% 27%;            /* #374151 */
+    --input: 215 25% 27%;             /* #374151 */
+    --ring: 213 94% 68%;              /* #3B82F6 */
+
+    --sidebar-background: 213 94% 68%; /* #3B82F6 */
+    --sidebar-foreground: 0 0% 100%;   /* #FFFFFF */
+    --sidebar-accent: 213 94% 75%;     /* Plus clair */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 213 94% 60%;     /* Plus foncé */
+    --sidebar-ring: 213 94% 68%;
+
+    /* Couleurs spécifiques pour les cartes en mode sombre */
+    --card-blue-bg: 213 94% 20%;      
+    --card-blue: 213 94% 68%;         
+    --card-green-bg: 142 76% 20%;     
+    --card-green: 142 76% 55%;        
+    --card-orange-bg: 32 95% 20%;     
+    --card-orange: 54 91% 45%;        
+    --card-red-bg: 0 62% 20%;         
+    --card-red: 0 62% 50%;            
+
+    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Fix for input and amount display visibility in dark mode */
+  .dark input[type="text"],
+  .dark input[type="date"],
+  .dark input[type="number"],
+  .dark input[type="email"],
+  .dark input[type="tel"],
+  .dark textarea,
+  .dark select,
+  .dark .amount-field {
+    @apply bg-card text-foreground border-input;
+  }
+  
+  /* Fix for gray color classes in dark mode */
+  .dark .text-gray-700,
+  .dark .text-gray-800,
+  .dark .text-gray-900 {
+    @apply text-foreground;
+  }
+  
+  .dark .text-gray-500,
+  .dark .text-gray-600 {
+    @apply text-muted-foreground;
+  }
+  
+  .dark .text-gray-400 {
+    @apply text-muted-foreground/80;
+  }
+  
+  .dark .bg-gray-50,
+  .dark .bg-gray-100 {
+    @apply bg-muted;
+  }
+  
+  .dark .bg-gray-200 {
+    @apply bg-accent;
+  }
+  
+  .dark .bg-white {
+    @apply bg-card;
+  }
+  
+  .dark .border-gray-300,
+  .dark .border-gray-200 {
+    @apply border-input;
+  }
+  
+  .dark .border-gray-400 {
+    @apply border-input;
+  }
+  
+  /* Fix for placeholder text in dark mode */
+  .dark input::placeholder,
+  .dark textarea::placeholder {
+    @apply text-muted-foreground;
+  }
+  
+  /* Fix for select dropdowns in dark mode */
+  .dark select option {
+    @apply bg-card text-foreground;
+  }
+  
+  /* Fix for buttons with direct colors in dark mode */
+  .dark .bg-blue-600 {
+    @apply bg-primary;
+  }
+  
+  .dark .bg-indigo-600 {
+    @apply bg-primary;
+  }
+  
+  .dark .border-blue-700,
+  .dark .border-indigo-700 {
+    @apply border-primary;
+  }
+  
+  .dark .text-blue-600,
+  .dark .text-indigo-600 {
+    @apply text-primary;
+  }
+  
+  /* Fix for gradient backgrounds in dark mode */
+  .dark .from-blue-50,
+  .dark .to-indigo-100 {
+    @apply from-background to-background;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Tajawal', 'Cairo', 'sans-serif';
+  }
+  
+  /* Styles pour les tableaux avec lignes alternées */
+  .table-striped tbody tr:nth-child(even) {
+    @apply bg-muted/30;
+  }
+  
+  .table-striped tbody tr:nth-child(odd) {
+    @apply bg-card;
+  }
+  
+  .table-striped tbody tr:hover {
+    @apply bg-accent/50 transition-colors duration-150;
+  }
+}
